@@ -1,0 +1,45 @@
+{
+  "name": "phrasecloudjs",
+  "version": "1.0.2",
+  "description": "Word cloud using HTML and javaScript",
+  "main": "dist/wordCloudJS.min.js",
+  "directories": {
+    "test": "dist"
+  },
+  "scripts": {
+    "clean": "del dist",
+    "prebuild": "npm run clean",
+    "build": "cross-env NODE_ENV=production webpack --color",
+    "postbuild": "webpack --color",
+    "dev": "cross-env NODE_ENV=development webpack --watch --color",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhiThakare/wordCloudJS.git"
+  },
+  "keywords": [
+    "Word",
+    "cloud",
+    "canvas",
+    "cloud",
+    "word",
+    "chart"
+  ],
+  "author": "Abhi Thakare (NetSupport)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbhiThakare/wordCloudJS/issues"
+  },
+  "homepage": "https://github.com/AbhiThakare/wordCloudJS#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.26.0",
+    "imports-loader": "^0.6.5",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  }
+}

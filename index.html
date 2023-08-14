@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>wordCloudJS Demo</title>
+</head>
+
+<body>
+    <h1 id="normal">wordCloudJS </h1>
+    <div id="container" style="height: 400px;"></div>
+    <script src="dist/wordCloudJS.min.js"></script>
+    <script>
+        var option = {
+            tooltip: {
+                show: true,
+                formatter: function (item) {
+                    return item[0] + ': Text <br>' + item[1] + '<br>' + 'Text'
+                }
+            },
+            maxFontSize: 100,
+            minFontSize: 10,
+            weightFactor: function (size) {
+                return Math.pow(size, 2) * 30;
+            },
+            list: [
+                ["London", 25],
+                ["Birmingham", 24],
+                ["Glasgow", 23],
+                ["Liverpool", 22],
+                ["Bristol", 21],
+                ["Manchester", 20],
+                ["Sheffield", 19],
+                ["Leeds", 18],
+                ["Edinburgh", 17],
+                ["Leicester", 16],
+                ["Coventry", 15],
+                ["Bradford", 14],
+                ["Cardiff", 13],
+                ["Belfast", 12],
+                ["Nottingham", 11],
+                ["Hull", 10],
+                ["Newcastle", 9],
+                ["Stoke", 8],
+                ["Southampton", 7],
+                ["Derby", 6],
+                ["Portsmouth", 5],
+                ["Brighton", 4],
+                ["Plymouth", 3],
+                ["Northampton", 2],
+                ["Reading", 1],
+            ],
+            // don't pass anything if you want to use default color function
+            // color: function (word, value, fontSize, distance, theta, item) { 
+            //     return (value === 1) ? '#4682b4' : getColors(item, value);
+            // },
+            shape: 'circle',
+            ellipticity: 1
+        }
+        function getColors(item, value) { // you can use value to define color for word
+            var color = '#56ad89';
+            switch (item[2]?.toLowerCase()) {
+                case 'London': {
+                    color = '#F4CD0B';
+                    break;
+                }
+                default:
+                    color = '#F4CD0B';
+                    break;
+            }
+            return color;
+        }
+        var wc = new wordCloudJS(document.getElementById('container'));
+        wc.setOption(option)
+
+    </script>
+</body>
+
+</html>
