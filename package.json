@@ -1,6 +1,6 @@
 {
-  "name": "phrasecloudjs",
-  "version": "1.0.2",
+  "name": "phrasecloud",
+  "version": "1.0.3",
   "description": "Word cloud using HTML and javaScript",
   "main": "dist/wordCloudJS.min.js",
   "directories": {

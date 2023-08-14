@@ -1,5 +1,5 @@
 
-# phrasecloudjs ![npm version](https://badge.fury.io/js/phrasecloudjs.svg)
+# phrasecloud ![npm version](https://badge.fury.io/js/phrasecloud.svg)
 HTML JavaScript generated based on [wordcloud2.js](https://github.com/timdream/wordcloud2.js)
 
 ## Installation
@@ -12,7 +12,7 @@ HTML JavaScript generated based on [wordcloud2.js](https://github.com/timdream/w
 * npm：
 
 ```bash
-npm i phrasecloudjs
+npm i phrasecloud
 ```
 
 ## Demo
